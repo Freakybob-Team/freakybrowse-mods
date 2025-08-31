@@ -15,8 +15,7 @@ if 'args.i' in globals():
 if (args.t == "greg"):
     urllib.request.urlretrieve("https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/greg.py", args.t + ".py")
 with open(args.t + ".py") as file:
-    if 'args.ar' in globals():
-        exec(file.read())
+    exec(file.read())
     try:
         os.remove(args.t + ".py")
     except:
