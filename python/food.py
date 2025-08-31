@@ -26,7 +26,7 @@ args = parser.parse_args()
 if args.i:
     if args.i in ["greg", "food"]:
         urllib.request.urlretrieve(
-            "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/" + args.i + ".py",
+            "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/python/" + args.i + ".py",
             args.i + ".py"
         )
 
@@ -36,7 +36,7 @@ if args.i:
 if args.t:
     if args.t in ["greg"]:
         urllib.request.urlretrieve(
-            "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/" + args.t + ".py",
+            "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/python/" + args.t + ".py",
             args.t + ".py"
         )
 
