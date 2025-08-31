@@ -23,23 +23,22 @@ parser.add_argument('--i')
 parser.add_argument('--t')
 args = parser.parse_args()
 
-if args.t:
-    print(args.t + ".py")
+if args.i:
+    if args.i in ["greg", "food"]:
+        urllib.request.urlretrieve(
+            "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/" + args.i + ".py",
+            args.i + ".py"
+        )
 
-if args.i in ["greg", "food"]:
-    urllib.request.urlretrieve(
-        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/" + args.i + ".py",
-        args.i + ".py"
-    )
 if args.i:
     with open(args.i + ".py") as file:
         exec(file.read())
-
-if args.t in ["greg"]:
-    urllib.request.urlretrieve(
-        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/" + args.i + ".py",
-        args.i + ".py"
-    )
+if args.t:
+    if args.t in ["greg"]:
+        urllib.request.urlretrieve(
+            "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/" + args.t + ".py",
+            args.t + ".py"
+        )
 
 if args.t:
     with open(args.t + ".py") as file:
