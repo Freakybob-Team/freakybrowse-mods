@@ -26,20 +26,21 @@ args = parser.parse_args()
 if args.t:
     print(args.t + ".py")
 
-if args.i == "greg":
+if args.i in ["greg", "food"]:
     urllib.request.urlretrieve(
-        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/greg.py",
+        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/" + args.i + ".py",
         args.i + ".py"
     )
 if args.i:
     with open(args.i + ".py") as file:
         exec(file.read())
 
-if args.t == "greg":
+if args.t in ["greg"]:
     urllib.request.urlretrieve(
-        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/greg.py",
-        args.t + ".py"
+        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/" + args.i + ".py",
+        args.i + ".py"
     )
+
 if args.t:
     with open(args.t + ".py") as file:
         exec(file.read())
