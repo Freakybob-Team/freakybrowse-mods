@@ -24,9 +24,15 @@ parser.add_argument('--t')
 args = parser.parse_args()
 
 if args.i:
-    if args.i in ["greg", "food"]:
+    if args.i in ["greg"]:
         urllib.request.urlretrieve(
             "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/python/" + args.i + ".py",
+            args.i + ".py"
+        )
+if args.i:
+    if args.i in ["food"]:
+        urllib.request.urlretrieve(
+            "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/python/food.py" + args.i + ".py",
             args.i + ".py"
         )
 
