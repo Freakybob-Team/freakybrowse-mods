@@ -14,15 +14,22 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+# NOTICE: By running this program, you consent to giving us ANONYMOUS error data via Sentry. Your data is stored in Sentry's European Union (EU) dataset.
+
 import argparse
 import urllib.request
 import os
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://102fa20c466815ea763d8a025201ec3c@o4509941003452416.ingest.de.sentry.io/4509941171748944",
+    send_default_pii=False,
+)
 
 parser = argparse.ArgumentParser(prog='Food', description='A package manager in Python')
 parser.add_argument('--i')
 parser.add_argument('--t')
 args = parser.parse_args()
-
 if args.i:
     if args.i in ["greg"]:
         urllib.request.urlretrieve(
