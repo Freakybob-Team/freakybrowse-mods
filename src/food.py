@@ -1,5 +1,4 @@
 # Food, a package manager in Python.
-
 # 2025 Freakybob Team. Licensed under GPL-3.0.
 
 # This program is free software: you can redistribute it and/or modify
@@ -14,24 +13,36 @@
 
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 import argparse
 import urllib.request
 import os
+
 parser = argparse.ArgumentParser(prog='Food', description='A package manager in Python')
-parser.add_argument('--i') # install + package (ex: --i greg)
-parser.add_argument('--t') # download temp then delete
-parser.add_argument('--ar') # autorun
+parser.add_argument('--i')
+parser.add_argument('--t')
 args = parser.parse_args()
-if (args.i == "greg"):
-    urllib.request.urlretrieve("https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/greg.py", args.i + ".py")
-if 'args.i' in globals():
+
+if args.t:
+    print(args.t + ".py")
+
+if args.i == "greg":
+    urllib.request.urlretrieve(
+        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/greg.py",
+        args.i + ".py"
+    )
+if args.i:
     with open(args.i + ".py") as file:
-        if 'args.ar' in globals():
-            exec(file.read())
-if (args.t == "greg"):
-    urllib.request.urlretrieve("https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/greg.py", args.t + ".py")
-with open(args.t + ".py") as file:
-    exec(file.read())
+        exec(file.read())
+
+if args.t == "greg":
+    urllib.request.urlretrieve(
+        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/greg.py",
+        args.t + ".py"
+    )
+if args.t:
+    with open(args.t + ".py") as file:
+        exec(file.read())
     try:
         os.remove(args.t + ".py")
     except:
