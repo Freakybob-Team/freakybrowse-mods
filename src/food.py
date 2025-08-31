@@ -32,7 +32,7 @@ if args.i:
 if args.i:
     if args.i in ["food"]:
         urllib.request.urlretrieve(
-            "https://freakybob-team.github.io/food/python/food.py",
+            "https://freakybob-team.github.io/food/src/food.py",
             args.i + ".py"
         )
 
