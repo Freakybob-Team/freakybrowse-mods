@@ -15,7 +15,7 @@ with urllib.request.urlopen("https://food.freakybob.site/autumn/food.json") as u
 if (args.i in data["packages"]):
     print("Package found!")
     urllib.request.urlretrieve(
-        "https://raw.githubusercontent.com/Freakybob-Team/food/refs/heads/main/packages/python/" + args.i + ".py", args.i + ".py"
+        "https://food.freakybob.site/packages/python/" + args.i + ".py", args.i + ".py"
     )
     print("Package downloaded!")
     print("The package will now run.")
