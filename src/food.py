@@ -1,7 +1,6 @@
 import argparse
 import urllib.request
 import os
-import sentry_sdk
 import json
 import sys
 
