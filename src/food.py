@@ -20,6 +20,7 @@ import argparse
 import urllib.request
 import os
 import sentry_sdk
+import json
 
 sentry_sdk.init(
     dsn="https://102fa20c466815ea763d8a025201ec3c@o4509941003452416.ingest.de.sentry.io/4509941171748944",
