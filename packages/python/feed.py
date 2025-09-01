@@ -5,4 +5,5 @@ urllib.request.urlretrieve(
     "https://food.freakybob.site/src/food.py", "food.py"
 )
 print("Downloaded Food! Thanks for using Feed.")
+print("Removing Feed...")
 os.remove("feed.py")
