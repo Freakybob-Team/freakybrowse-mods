@@ -35,6 +35,6 @@ def txt(args):
         print("The package will now run.")
         print("-----")
         with open(args.i + ".txt") as file:
-            file.read()
+            print(file.read())
     else:
         sys.exit("Package not found. Food will now exit.")
