@@ -7,7 +7,7 @@ import sys
 def python(args):
     with urllib.request.urlopen("https://food.freakybob.site/autumn/food.json") as url:
         data = json.load(url)
-        print("Packages fetched! [autumn]")
+        print("Packages fetched! [autumn, food.json]")
     if (args.i in data["pypackages"]):
         print("Package found!")
         urllib.request.urlretrieve(
@@ -25,7 +25,7 @@ def python(args):
 def txt(args):
     with urllib.request.urlopen("https://food.freakybob.site/autumn/food.json") as url:
         data = json.load(url)
-        print("Packages fetched! [autumn]")
+        print("Packages fetched! [autumn, food.json]")
     if (args.i in data["txt"]):
         print("Package found!")
         urllib.request.urlretrieve(
