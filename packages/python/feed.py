@@ -7,4 +7,7 @@ urllib.request.urlretrieve(
 urllib.request.urlretrieve(
     "https://food.freakybob.site/src/eat.py", "eat.py"
 )
-print("Downloaded Food and Eat! Thanks for using Feed.")
+urllib.request.urlretrieve(
+    "https://food.freakybob.site/src/cook.py", "cook.py"
+)
+print("Downloaded Food, Eat and Cook! Thanks for using Feed.")
