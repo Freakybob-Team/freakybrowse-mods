@@ -7,15 +7,15 @@ def cookpy(args):
     with urllib.request.urlopen("https://food.freakybob.site/autumn/cook.json") as url:
         data = json.load(url)
         print("Packages fetched! [autumn, cook.json]")
-    if (args.i in data["pypackages"]):
+    if (args.t in data["pypackages"]):
         print("Package found!")
         urllib.request.urlretrieve(
-            "https://food.freakybob.site/packages/python/" + args.i + ".py", args.i + ".py"
+            "https://food.freakybob.site/packages/python/" + args.t + ".py", args.t + ".py"
         )
         print("Package downloaded!")
         print("The package will now run.")
         print("-----")
-        with open(args.i + ".py") as file:
+        with open(args.t + ".py") as file:
             exec(file.read())
             try:
                 os.remove(args.t + ".py")
