@@ -1,8 +1,10 @@
-# food
-a package manager in Python for a variety of files
-# why food?
-food is easy to use and widely available cause of Python!
+# Freakybrowse Mods
+Now introducing our own form of extensions: mods, for Freakybrowse!
+# What does this repo contain?
+It contains a modified version of Food and will host Freakybrowse mods in the future.
+# Roadmap
+CLI release
 
-The spirtial successor to [SugamaPackager](https://github.com/Freakybob-Team/sugamaPackager), Food is designed by us, for you.
-# How does Food work?
-<img width="1920" height="1080" alt="Food" src="https://github.com/user-attachments/assets/c2fc4c43-caf6-4e0b-b5df-6ed475354118" />
+Mod store website/built-in UI?
+
+Release in Freakybrowse
