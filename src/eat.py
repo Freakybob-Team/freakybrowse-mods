@@ -11,7 +11,7 @@ def python(args):
     if (args.i in data["pypackages"]):
         print("Package found!")
         urllib.request.urlretrieve(
-            "https://freakybob-team.github.io/freakybrowse-mods/packages/python/" + args.i + ".py", args.i + ".py"
+            "https://freakybob-team.github.io/freakybrowse-mods/packages/python/" + args.i + ".py" + "/" + args.i + ".py", args.i + "/" + args.i + ".py"
         )
         print("Package downloaded!")
         print("The package will now run.")
