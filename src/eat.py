@@ -8,7 +8,7 @@ def python(args):
     with urllib.request.urlopen("https://freakybob-team.github.io/freakybrowse-mods/autumn/food.json") as url:
         data = json.load(url)
         print("Packages fetched! [autumn, food.json]")
-    if (args.i in data["pypackages"]):
+    if (args.i in data["mods"]):
         print("Package found!")
         urllib.request.urlretrieve(
             "https://freakybob-team.github.io/freakybrowse-mods/packages/python/" + args.i + ".py" + "/" + args.i + ".py", args.i + "/" + args.i + ".py"
